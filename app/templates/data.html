@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+	<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/dataTables.jqueryui.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/rowgroup/1.1.2/css/rowGroup.jqueryui.min.css">
+
+</head>
+<body>
+    <a href="{% url 'upload_file' %}">Upload Data</a>
+<table id="example" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Timestamp</th>
+                <th>Temperature</th>
+                <th>Duration</th>
+            </tr>
+        </thead>
+        <tbody>
+        	{% for record in data %}
+	            <tr>
+	                <td>{{ record.task_id }}</td>
+	                <td>{{ record.timestamp }}</td>
+	                <td>{{ record.temperature }}</td>
+	                <td>{{ record.duration }}</td>
+	            </tr>
+      		{% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+   
+            </tr>
+        </tfoot>
+    </table>
+
+ <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+ <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+ <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/dataTables.jqueryui.min.js"></script>
+ <script type="text/javascript" src="https://cdn.datatables.net/rowgroup/1.1.2/js/dataTables.rowGroup.min.js"></script>
+
+ <script type="text/javascript">
+    	$(document).ready(function() {
+    $('#example').DataTable( {
+    	"pageLength": 50
+        // order: [[2, 'asc']],
+        // rowGroup: {
+        //     dataSrc: 2
+        // }
+    } );
+} );
+    </script>
+</body>
+</html>
