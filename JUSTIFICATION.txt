@@ -1,0 +1,10 @@
+#####################################################
+
+Not much justification is required in this project as this is a simple process.
+The comments in the code give way to understand better.
+
+
+Added the option to upload the data dynamically. Users can visit this URL http://127.0.0.1:8000/upload-data.
+Upload the file here, data will be saved in the DB table and shows on the HTML page.
+
+NOTE: To upload the data the CSV file format or columns name should be the same as provided in task_data.csv.

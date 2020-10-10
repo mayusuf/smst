@@ -1,0 +1,40 @@
+##################### REQUIREMENTS ################################
+
+1) python 3.6
+2) django 3 
+3) MySql 5 
+
+##################### INSTALLATION #################################
+
+1) Install Python 3.6 in your system if you don't have it already.
+2) Create a virtual environment for python 3.6 and activate the environment.
+3) Clone the project from the bare repository smst.git file that is come in the zip file.
+4) install requirements.txt this file contains all the dependencies of this project.
+
+##################### SETTINGS #####################################
+
+1) Create MySQL database, database user with password, and grant all permissions to this user.
+2) Setup database configuration in the file project/settings.py 
+
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': '',
+            'USER': '',
+            'PASSWORD': '',
+            'HOST': '',
+            'PORT': '',
+        }
+    }
+
+##################### RUNNING #######################################
+
+1) Run the following command for the database tables migration
+
+    python manage.py migrate
+    
+2) Run the server using the following command 
+    
+    python manage.py runserver 127.0.0.1:8000
+
+3) Browse the application at http://127.0.0.1:8000/ 
